@@ -12,6 +12,9 @@ Aplicación móvil minimalista para aprender y usar en el día a día **100 fras
 - Audio en japonés con TTS (voz `ja-JP`)
 - Búsqueda por japonés, romaji y español
 - Filtro por categorías de situación real
+- Frase del día (dinámica por fecha)
+- Favoritos con persistencia local (offline)
+- Quiz tipo flashcards con progreso y rachas guardadas
 - Interfaz minimalista, optimizada para móvil
 
 ## Ejecutar en tu Pixel 9 (rápido)
@@ -37,11 +40,19 @@ Si quieres instalar sin Expo Go:
    ```bash
    eas login
    eas build:configure
-   eas build --platform android
    ```
-3. Descarga el artefacto generado (APK/AAB) e instálalo en tu Pixel 9.
+3. Build directo APK (instalación rápida en Pixel):
+   ```bash
+   npm run build:android:apk
+   ```
+4. Build de producción AAB (Play Store):
+   ```bash
+   npm run build:android:aab
+   ```
+5. Descarga el artefacto generado e instálalo en tu Pixel 9.
 
 ## Notas
 
 - La app funciona sin backend para el aprendizaje base.
-- Si después quieres sincronización/progreso en servidor (Railway), se puede añadir en una siguiente iteración.
+- Se añadió `eas.json` con perfiles `preview` (APK) y `production` (AAB).
+- Si después quieres sincronización avanzada con servidor (Railway), se puede añadir en una siguiente iteración.
