@@ -9,7 +9,12 @@ export type PhraseCategory =
   | "Hotel y servicios"
   | "Emergencias"
   | "Conversación"
-  | "Tiempo";
+  | "Tiempo"
+  | "Números"
+  | "Konbini"
+  | "Izakaya"
+  | "Médico"
+  | "Cultura";
 
 export interface PhraseItem {
   id: number;
@@ -84,7 +89,7 @@ export const PHRASES: PhraseItem[] = [
   { id: 61, japanese: "チェックインお願いします", romaji: "Chekkuin onegaishimasu", spanish: "Check-in, por favor", category: "Hotel y servicios", kind: "Frase" },
   { id: 62, japanese: "予約しています", romaji: "Yoyaku shiteimasu", spanish: "Tengo una reserva", category: "Hotel y servicios", kind: "Frase" },
   { id: 63, japanese: "一泊お願いします", romaji: "Ippaku onegaishimasu", spanish: "Una noche, por favor", category: "Hotel y servicios", kind: "Frase" },
-  { id: 64, japanese: "Wi-Fiはありますか", romaji: "Wai-fai wa arimasu ka", spanish: "¿Hay Wi‑Fi?", category: "Hotel y servicios", kind: "Frase" },
+  { id: 64, japanese: "Wi-Fiはありますか", romaji: "Wai-fai wa arimasu ka", spanish: "¿Hay Wi-Fi?", category: "Hotel y servicios", kind: "Frase" },
   { id: 65, japanese: "パスワードは何ですか", romaji: "Pasuwaado wa nan desu ka", spanish: "¿Cuál es la contraseña?", category: "Hotel y servicios", kind: "Frase" },
   { id: 66, japanese: "鍵をなくしました", romaji: "Kagi o nakushimashita", spanish: "Perdí la llave", category: "Hotel y servicios", kind: "Frase" },
   { id: 67, japanese: "充電できますか", romaji: "Juuden dekimasu ka", spanish: "¿Puedo cargar el móvil aquí?", category: "Hotel y servicios", kind: "Frase" },
@@ -121,6 +126,62 @@ export const PHRASES: PhraseItem[] = [
   { id: 98, japanese: "入口", romaji: "Iriguchi", spanish: "Entrada", category: "Direcciones", kind: "Palabra" },
   { id: 99, japanese: "出口", romaji: "Deguchi", spanish: "Salida", category: "Direcciones", kind: "Palabra" },
   { id: 100, japanese: "危ない", romaji: "Abunai", spanish: "Peligroso / cuidado", category: "Emergencias", kind: "Palabra" },
+
+  // -- Números --
+  { id: 101, japanese: "一", romaji: "Ichi", spanish: "1 (uno)", category: "Números", kind: "Palabra" },
+  { id: 102, japanese: "二", romaji: "Ni", spanish: "2 (dos)", category: "Números", kind: "Palabra" },
+  { id: 103, japanese: "三", romaji: "San", spanish: "3 (tres)", category: "Números", kind: "Palabra" },
+  { id: 104, japanese: "四", romaji: "Yon / Shi", spanish: "4 (cuatro)", category: "Números", kind: "Palabra" },
+  { id: 105, japanese: "五", romaji: "Go", spanish: "5 (cinco)", category: "Números", kind: "Palabra" },
+  { id: 106, japanese: "六", romaji: "Roku", spanish: "6 (seis)", category: "Números", kind: "Palabra" },
+  { id: 107, japanese: "七", romaji: "Nana / Shichi", spanish: "7 (siete)", category: "Números", kind: "Palabra" },
+  { id: 108, japanese: "八", romaji: "Hachi", spanish: "8 (ocho)", category: "Números", kind: "Palabra" },
+  { id: 109, japanese: "九", romaji: "Kyuu / Ku", spanish: "9 (nueve)", category: "Números", kind: "Palabra" },
+  { id: 110, japanese: "十", romaji: "Juu", spanish: "10 (diez)", category: "Números", kind: "Palabra" },
+  { id: 111, japanese: "百", romaji: "Hyaku", spanish: "100 (cien)", category: "Números", kind: "Palabra" },
+  { id: 112, japanese: "千", romaji: "Sen", spanish: "1.000 (mil)", category: "Números", kind: "Palabra" },
+  { id: 113, japanese: "一万", romaji: "Ichiman", spanish: "10.000 (diez mil)", category: "Números", kind: "Palabra" },
+  { id: 114, japanese: "一人", romaji: "Hitori", spanish: "1 persona", category: "Números", kind: "Palabra" },
+  { id: 115, japanese: "二人", romaji: "Futari", spanish: "2 personas", category: "Números", kind: "Palabra" },
+
+  // -- Konbini --
+  { id: 116, japanese: "温めますか", romaji: "Atatamemasu ka", spanish: "¿Lo caliento? (te preguntará el cajero)", category: "Konbini", kind: "Frase" },
+  { id: 117, japanese: "袋はいりません", romaji: "Fukuro wa irimasen", spanish: "No necesito bolsa", category: "Konbini", kind: "Frase" },
+  { id: 118, japanese: "袋をください", romaji: "Fukuro o kudasai", spanish: "Una bolsa, por favor", category: "Konbini", kind: "Frase" },
+  { id: 119, japanese: "お箸をください", romaji: "Ohashi o kudasai", spanish: "Palillos, por favor", category: "Konbini", kind: "Frase" },
+  { id: 120, japanese: "スプーンをください", romaji: "Supuun o kudasai", spanish: "Cuchara, por favor", category: "Konbini", kind: "Frase" },
+  { id: 121, japanese: "ATMはどこですか", romaji: "Eitiemu wa doko desu ka", spanish: "¿Dónde está el cajero?", category: "Konbini", kind: "Frase" },
+
+  // -- Izakaya --
+  { id: 122, japanese: "生ビールをください", romaji: "Nama biiru o kudasai", spanish: "Cerveza de barril, por favor", category: "Izakaya", kind: "Frase" },
+  { id: 123, japanese: "乾杯", romaji: "Kanpai", spanish: "¡Salud! (al brindar)", category: "Izakaya", kind: "Palabra" },
+  { id: 124, japanese: "盛り合わせ", romaji: "Moriawase", spanish: "Surtido / plato variado", category: "Izakaya", kind: "Palabra" },
+  { id: 125, japanese: "焼き鳥", romaji: "Yakitori", spanish: "Brochetas de pollo", category: "Izakaya", kind: "Palabra" },
+  { id: 126, japanese: "枝豆", romaji: "Edamame", spanish: "Vainas de soja (aperitivo típico)", category: "Izakaya", kind: "Palabra" },
+  { id: 127, japanese: "飲み放題", romaji: "Nomihoudai", spanish: "Barra libre de bebidas", category: "Izakaya", kind: "Palabra" },
+  { id: 128, japanese: "食べ放題", romaji: "Tabehoudai", spanish: "Buffet libre / comer todo lo que quieras", category: "Izakaya", kind: "Palabra" },
+
+  // -- Transporte real --
+  { id: 129, japanese: "片道", romaji: "Katamichi", spanish: "Solo ida", category: "Transporte", kind: "Palabra" },
+  { id: 130, japanese: "往復", romaji: "Oufuku", spanish: "Ida y vuelta", category: "Transporte", kind: "Palabra" },
+  { id: 131, japanese: "指定席", romaji: "Shiteiseki", spanish: "Asiento reservado", category: "Transporte", kind: "Palabra" },
+  { id: 132, japanese: "自由席", romaji: "Jiyuuseki", spanish: "Asiento libre", category: "Transporte", kind: "Palabra" },
+  { id: 133, japanese: "終電は何時ですか", romaji: "Shuuden wa nanji desu ka", spanish: "¿A qué hora es el último tren?", category: "Transporte", kind: "Frase" },
+
+  // -- Médico / farmacia --
+  { id: 134, japanese: "頭が痛いです", romaji: "Atama ga itai desu", spanish: "Me duele la cabeza", category: "Médico", kind: "Frase" },
+  { id: 135, japanese: "お腹が痛いです", romaji: "Onaka ga itai desu", spanish: "Me duele el estómago", category: "Médico", kind: "Frase" },
+  { id: 136, japanese: "薬をください", romaji: "Kusuri o kudasai", spanish: "Medicina, por favor", category: "Médico", kind: "Frase" },
+  { id: 137, japanese: "咳が出ます", romaji: "Seki ga demasu", spanish: "Tengo tos", category: "Médico", kind: "Frase" },
+  { id: 138, japanese: "保険証はありますか", romaji: "Hokenshou wa arimasu ka", spanish: "¿Tiene tarjeta de seguro?", category: "Médico", kind: "Frase" },
+
+  // -- Cultura práctica --
+  { id: 139, japanese: "いただきます", romaji: "Itadakimasu", spanish: "Buen provecho (antes de comer)", category: "Cultura", kind: "Frase" },
+  { id: 140, japanese: "ごちそうさまでした", romaji: "Gochisousama deshita", spanish: "Gracias por la comida (al terminar)", category: "Cultura", kind: "Frase" },
+  { id: 141, japanese: "とんでもないです", romaji: "Tondemonai desu", spanish: "No es nada (respuesta humilde)", category: "Cultura", kind: "Frase" },
+  { id: 142, japanese: "お邪魔します", romaji: "Ojama shimasu", spanish: "Perdón por molestar (al entrar en casa ajena)", category: "Cultura", kind: "Frase" },
+  { id: 143, japanese: "靴を脱いでください", romaji: "Kutsu o nuide kudasai", spanish: "Quítese los zapatos, por favor", category: "Cultura", kind: "Frase" },
+  { id: 144, japanese: "お先にどうぞ", romaji: "Osaki ni douzo", spanish: "Usted primero", category: "Cultura", kind: "Frase" },
 ];
 
 export const CATEGORIES = ["Todo", ...new Set(PHRASES.map((phrase) => phrase.category))] as const;

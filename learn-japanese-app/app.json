@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Nihongo Pocket 100",
+    "name": "LearnJapanese",
     "slug": "nihongo-pocket-100",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -26,6 +26,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0148c07c-c4ab-4d1c-b5ca-a5200abe8b1a"
+      }
+    },
+    "owner": "tottimilan"
   }
 }
