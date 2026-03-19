@@ -32,14 +32,14 @@ Aplicación móvil minimalista para aprender y usar en el día a día **100 fras
 
 Si quieres instalar sin Expo Go:
 
-1. Instala EAS CLI:
+1. Desde `learn-japanese-app/`, instala dependencias:
    ```bash
-   npm install -g eas-cli
+   npm install
    ```
-2. Desde `learn-japanese-app/`:
+2. Inicia sesión en Expo (si aún no estás autenticado):
    ```bash
-   eas login
-   eas build:configure
+   npx eas-cli login
+   npx eas-cli build:configure
    ```
 3. Build directo APK (instalación rápida en Pixel):
    ```bash
