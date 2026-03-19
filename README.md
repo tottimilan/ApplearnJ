@@ -1,19 +1,47 @@
-# Learn Japanese App
+# Nihongo Pocket 100 (Pixel 9)
 
-## Overview
-This mobile application is designed specifically for learning Japanese phrases and words, tailored for the Pixel 9. It serves as an essential tool for anyone looking to enhance their language skills through modern, relevant content.
+Aplicación móvil minimalista para aprender y usar en el día a día **100 frases/palabras japonesas** útiles en Japón (restaurantes, calle, transporte, hotel, emergencias y conversación).
 
-## Features
-- **Audio Pronunciation**: Hear native speakers pronounce phrases and words, helping you to master the correct pronunciation.
-- **Modern Phrases**: Stay updated with contemporary phrases suitable for daily communication while in Japan.
-- **Minimalist Design**: Enjoy an intuitive and easy-to-navigate interface designed for learners of all ages.
-- **Setup Instructions**: Get started quickly with detailed setup instructions, ensuring that you’re ready to use the app in no time.
-- **Releaway Server Integration**: Integrate seamlessly with the Releaway server to enhance your learning experience with additional resources and features.
+## Estructura del proyecto
 
-## Installation Instructions
-1. **Download the App**: Obtain the app from the Play Store.
-2. **Setup Server Integration**: Enter your Releaway server credentials in the settings menu to access all features.
-3. **Start Learning**: Dive into the lessons and start practicing Japanese today!
+- `learn-japanese-app/` → app móvil en Expo + React Native (TypeScript)
 
-## Conclusion
-This app is an effective companion for anyone eager to immerse themselves in the Japanese language, whether for travel, work, or personal interest. Join countless others in enhancing your communication skills, and begin your journey to fluency!
+## Funcionalidades principales
+
+- 100 frases y palabras reales de uso frecuente
+- Audio en japonés con TTS (voz `ja-JP`)
+- Búsqueda por japonés, romaji y español
+- Filtro por categorías de situación real
+- Interfaz minimalista, optimizada para móvil
+
+## Ejecutar en tu Pixel 9 (rápido)
+
+1. Instala **Expo Go** desde Play Store en tu Pixel.
+2. En tu ordenador:
+   ```bash
+   cd learn-japanese-app
+   npm install
+   npm run android
+   ```
+3. Se abrirá la app en Android/emulador o te mostrará QR para Expo Go.
+
+## Build instalable (APK/AAB)
+
+Si quieres instalar sin Expo Go:
+
+1. Instala EAS CLI:
+   ```bash
+   npm install -g eas-cli
+   ```
+2. Desde `learn-japanese-app/`:
+   ```bash
+   eas login
+   eas build:configure
+   eas build --platform android
+   ```
+3. Descarga el artefacto generado (APK/AAB) e instálalo en tu Pixel 9.
+
+## Notas
+
+- La app funciona sin backend para el aprendizaje base.
+- Si después quieres sincronización/progreso en servidor (Railway), se puede añadir en una siguiente iteración.

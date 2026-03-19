@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "learn-japanese-app",
-    "slug": "learn-japanese-app",
+    "name": "Nihongo Pocket 100",
+    "slug": "nihongo-pocket-100",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,6 +15,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.tottimilan.nihongopocket100",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
